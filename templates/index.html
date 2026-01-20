@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Log Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Web Log Analyzer</h1>
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+            <input type="file" name="logfile" accept=".log" required>
+            <br>
+            <button type="submit">Analyze</button>
+        </form>
+
+        {% if errors %}
+            <h2>Errors Found:</h2>
+            <table>
+                <tr>
+                    <th>Line No</th>
+                    <th>Error Description</th>
+                </tr>
+                {% for line_no, error in errors %}
+                <tr class="error-row">
+                    <td>{{ line_no }}</td>
+                    <td>{{ error }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% elif errors is defined %}
+            <div class="no-error">✅ No errors found</div>
+        {% endif %}
+    </div>
+</body>
+</html>

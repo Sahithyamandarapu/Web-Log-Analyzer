@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: #ffffff;
+    width: 600px;
+    max-width: 90%;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+button {
+    padding: 12px 30px;
+    background-color: #667eea;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #5a67d8;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #667eea;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.error-row {
+    color: red;
+    font-weight: bold;
+}
+
+.no-error {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+    font-size: 18px;
+}
